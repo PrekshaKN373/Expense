@@ -12,7 +12,7 @@ A simple, efficient, and intuitive expense tracker application built with Django
 ## Technologies Used
 - **Django** (Backend Framework)
 - **Python** (Programming Language)
-- **SQLite** (Database)/PostGreSQL
+- **SQLite** (Database)/PostgreSQL(Database)
 - **HTML/CSS** (Frontend)
 - **JavaScript** (Dynamic Elements)
 - **Matplotlib** (Data Visualization)
