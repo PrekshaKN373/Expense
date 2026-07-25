@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'ExpenseTracker.wsgi.application'
 DATABASES = {
   "default": dj_database_url.config()
     }
-}
+
 
 
 # Password validation
