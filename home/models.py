@@ -31,7 +31,7 @@ class Addmoney_info(models.Model):
     Date = models.DateField(default = now)
     Category = models.CharField( max_length = 20, choices = SELECT_CATEGORY_CHOICES , default ='Food')
     class Meta:
-        db_table:'addmoney'
+        db_table='addmoney'
         
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -40,8 +40,7 @@ class UserProfile(models.Model):
     Savings = models.FloatField(default=0)
     profile_image = models.ImageField(upload_to='profile_pics/', default='default.jpg')
 
-    def _str_(self):
-        return self.user.username
-
+  def __str__(self):
+    return self.user.username
 
 
