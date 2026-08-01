@@ -85,9 +85,7 @@ WSGI_APPLICATION = 'ExpenseTracker.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    "default": dj_database_url.parse(
-        "postgresql://expense_db_pgk8_user:TQCmAaj1GMH96wwNWgKzJiVYivbWXn6P@dpg-d9i9cvnlk1mc73cnvf80-a.singapore-postgres.render.com:5432/expense_db_pgk8"
-    )
+    "default": dj_database_url.config(conn_max_age=600)
 }
 
 
