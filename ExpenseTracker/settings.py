@@ -29,7 +29,11 @@ SECRET_KEY = '4--(d0^o%3vqt#-c(hf+8)a$95z8gbo57xol5pft!%xpve9_zd'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [ ".onrender.com",]
+ALLOWED_HOSTS = [
+    ".onrender.com",
+    "127.0.0.1",
+    "localhost",
+]
 
 
 # Application definition
@@ -81,8 +85,10 @@ WSGI_APPLICATION = 'ExpenseTracker.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-  "default": dj_database_url.config()
-    }
+    "default": dj_database_url.parse(
+        "postgresql://expense_db_pgk8_user:TQCmAaj1GMH96wwNWgKzJiVYivbWXn6P@dpg-d9i9cvnlk1mc73cnvf80-a.singapore-postgres.render.com:5432/expense_db_pgk8"
+    )
+}
 
 
 
